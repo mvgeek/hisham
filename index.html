@@ -1,231 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎉 Congratulations on your graduation, Hisham! 🎓</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>🎉 Congratulations on your graduation, Hisham! 🎓</title>
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            padding: 2rem;
-            background-color: #f5f5f5;
-        }
+       body {
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+           line-height: 1.6;
+           padding: 2rem;
+           background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+           min-height: 100vh;
+       }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+       .container {
+           max-width: 800px;
+           margin: 0 auto;
+       }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #333;
-        }
+       h1 {
+           text-align: center;
+           margin-bottom: 2rem;
+           color: #2d3748;
+           font-size: 2.5rem;
+           text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+           padding: 1rem;
+           background: white;
+           border-radius: 15px;
+           box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+       }
 
-        .message-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+       .message-card {
+           background: white;
+           border-radius: 15px;
+           padding: 2rem;
+           margin-bottom: 2rem;
+           box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+           transition: transform 0.2s ease;
+       }
 
-        .message-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
+       .message-card:hover {
+           transform: translateY(-5px);
+       }
 
-        .author {
-            font-weight: 600;
-            color: #333;
-        }
+       .message-header {
+           display: flex;
+           justify-content: space-between;
+           margin-bottom: 1rem;
+           border-bottom: 2px solid #e2e8f0;
+           padding-bottom: 0.5rem;
+       }
 
-        .relation {
-            color: #666;
-            font-size: 0.9rem;
-        }
+       .author {
+           font-weight: 600;
+           color: #2d3748;
+           font-size: 1.2rem;
+       }
 
-        .message-image {
-            width: auto;
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin: 1rem 0;
-            display: block;
-        }
-        .message-text {
-            color: #444;
-        }
+       .message-text {
+           color: #4a5568;
+           line-height: 1.8;
+           font-size: 1.1rem;
+       }
 
-        @media (max-width: 600px) {
-            body {
-                padding: 1rem;
-            }
-        }
-    </style>
+       .message-image {
+           width: auto;
+           max-width: 100%;
+           height: auto;
+           border-radius: 10px;
+           margin: 1rem 0;
+           display: block;
+           box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+           cursor: pointer;
+           transition: transform 0.3s ease;
+       }
+
+       .modal {
+           display: none;
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(0,0,0,0.9);
+           z-index: 1000;
+           cursor: pointer;
+       }
+
+       .modal-content {
+           max-width: 90%;
+           max-height: 90%;
+           margin: auto;
+           display: block;
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+       }
+
+       @media (max-width: 600px) {
+           body {
+               padding: 1rem;
+           }
+           
+           h1 {
+               font-size: 2rem;
+           }
+       }
+   </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 Congratulations on your graduation, Hisham! 🎓</h1>
+   <div class="container">
+       <h1>🎉 Congratulations on your graduation, Hisham! 🎓</h1>
 
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Thuthu , Thuthudhatha & Adhyan</div>
-                </div>
-            </div>
-            <!--<img src="/api/placeholder/800/400" alt="Message from Mom & Dad" class="message-image"> -->
-            <div class="message-text">
-                Allahumma barik lahu, and may your every step be blessed! 🌟
-            </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Maae</div>
-                </div>
-            </div>
-            <!--<img src="/api/placeholder/800/400" alt="Message from Mom & Dad" class="message-image"> -->
-            <div class="message-text">
-                Congratulations on your first degree. Now go get your second one  
-            </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Thuhtha</div>
-                </div>
-            </div>
-            <!--<img src="/api/placeholder/800/400" alt="Message from Mom & Dad" class="message-image"> -->
-            <div class="message-text">
-                CONGRATULATIONS on doing that thing you did that you said you were going to do! You did that thing! (Two thumbs up)  
-            </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">With love, Dhontha, Thuhtha & Kudaahtha</div>
-                </div>
-            </div>
-            <!--<img src="/api/placeholder/800/400" alt="Message from Mom & Dad" class="message-image"> -->
-            <div class="message-text">
-                Hisham, Words cannot express how proud we are of you today! You’ve worked so hard, and your dedication, perseverance, and brilliance have paid off in the most spectacular way.
-As your aunts, we’ve always known you were destined for amazing things, but seeing you shine so brightly has truly filled our hearts with joy and admiration. You’ve made us so proud.
-This achievement is a testament to your incredible talent, passion, and determination. Remember that this is just the beginning of a remarkable journey, and we can’t wait to see all the wonderful things you’ll accomplish in the future.
-Congratulations on this well-deserved honor! (Aslu thuhtha sidin vahta boa falhaaleema hisham brain upgrade vefa theenee )  
-            </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Love, Peachy & Aydin</div>
-                </div>
-            </div>
-            <img src="https://media.discordapp.net/attachments/1140998280352907297/1324251650424176713/unnamed.png?ex=677778f4&is=67762774&hm=74d41d05e979aac7225026fb8d8d0322c880468e424e35534408ef5e7368092a&=&format=webp&quality=lossless" alt="Message from Mom & Dad" class="message-image">
-            <!--div class="message-text">
-                Our loving son, Alhamdhullilah! You did    it! So proud of you!  
-You have filled our hearts with immense joy and pride.Our blessings are always with you and Hope you succeed in every walk of life. Best of luck on your new beginnings.May Allah blesses in every steps you take ahead
-Insha Allah! Our love and support will always be with you! 
-Be nice,
-Be good,
-Be kind,
-Be responsible,
-Be strong and healthy
-And always give a smile to your face 
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Thuthu, Thuthudhatha & Adhyan ✨</div>
+           </div>
+           <div class="message-text">
+               Allahumma barik lahu, and may your every step be blessed! 🌟 🤲 ✨
+           </div>
+       </div>
 
-            </div-->
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Ibs</div>
-                </div>
-            </div>
-            <!--<img src="/api/placeholder/800/400" alt="Message from Mom & Dad" class="message-image"> -->
-            <div class="message-text">
-                Congratulations, Dhonbey! 
-I'm so proud of all the hard work and dedication you've put in to earn your degree. This is such an incredible achievement, and I know this is just the beginning of even more success ahead. Even though sometimes you make me feel like hitting you (just kidding! Or maybe not), I truly admire your perseverance and strength and dedication for your studies, (i didnt want to admit it but i just did).  You've earned this moment. Enjoy it, you deserve it!
- 
-            </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Love Kiki & Kaina</div>
-                </div>
-            </div>
-            <!--<img src="/api/placeholder/800/400" alt="Message from Mom & Dad" class="message-image"> -->
-            <div class="message-text">
-                Congratulations on your well-deserved success.  
-            </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Hijje</div>
-                </div>
-            </div>
-            <img src="https://media.discordapp.net/attachments/1140998280352907297/1324253149652844584/unnamed_1.png?ex=67777a5a&is=677628da&hm=91d32edf692a136682d79160334ece87fe0e7af30c4d8c0ee773db1579e8f90a&=&format=webp&quality=lossless" alt="Message from Mom & Dad" class="message-image">
-            <!--div class="message-text">
-                Congratulations on your well-deserved success.  
-        </div -->
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Suha</div>
-                </div>
-            </div>
-            <!--img src="https://media.discordapp.net/attachments/1140998280352907297/1324253149652844584/unnamed_1.png?ex=67777a5a&is=677628da&hm=91d32edf692a136682d79160334ece87fe0e7af30c4d8c0ee773db1579e8f90a&=&format=webp&quality=lossless" alt="Message from Mom & Dad" class="message-image"-->
-            <div class="message-text">
-                many many congratulations on your achievement, hisham! proud of u!!
-        </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Eaf</div>
-                </div>
-            </div>
-            <!--img src="https://media.discordapp.net/attachments/1140998280352907297/1324253149652844584/unnamed_1.png?ex=67777a5a&is=677628da&hm=91d32edf692a136682d79160334ece87fe0e7af30c4d8c0ee773db1579e8f90a&=&format=webp&quality=lossless" alt="Message from Mom & Dad" class="message-image"-->
-            <div class="message-text">
-                congrats KING u are so cool and we are so proud of u
-        </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author">Nuha</div>
-                </div>
-            </div>
-            <!--img src="https://media.discordapp.net/attachments/1140998280352907297/1324253149652844584/unnamed_1.png?ex=67777a5a&is=677628da&hm=91d32edf692a136682d79160334ece87fe0e7af30c4d8c0ee773db1579e8f90a&=&format=webp&quality=lossless" alt="Message from Mom & Dad" class="message-image"-->
-            <div class="message-text">
-                Congratulations, hisham! Always so proud of you 
-        </div>
-        </div>
-        <div class="message-card">
-            <div class="message-header">
-                <div>
-                    <div class="author"> Maama & kaafa</div>
-                </div>
-            </div>
-            <!--img src="https://media.discordapp.net/attachments/1140998280352907297/1324253149652844584/unnamed_1.png?ex=67777a5a&is=677628da&hm=91d32edf692a136682d79160334ece87fe0e7af30c4d8c0ee773db1579e8f90a&=&format=webp&quality=lossless" alt="Message from Mom & Dad" class="message-image"-->
-            <div class="message-text">
-                Miadhu Maama aai kaafa varah ufaavehje thi hoadhi kaamiyaaby ah 
- Dharifulhu ge nan govumun  Maama iny varah ufalun ekamaku varah dheraves vi   dharifulhu  stage mathin  nufenunyma.
-Thiya hoadhi kaamiyaaby ah maama aai  kaafa ge faraaathun varah bodah maruhaba 
-Maama aai kaafa ge abadhuves uhmeedhaky dharifulhuge thiya hihvaraa eku kuri ah dhiyumashe!
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Maae 🎓</div>
+           </div>
+           <div class="message-text">
+               Congratulations on your first degree. Now go get your second one! 🚀 💪
+           </div>
+       </div>
 
-        </div>
-        </div>
-    </div>
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Thuhtha 🌟</div>
+           </div>
+           <div class="message-text">
+               CONGRATULATIONS on doing that thing you did that you said you were going to do! You did that thing! 👏 ✨
+           </div>
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">With love, Dhontha, Thuhtha & Kudaahtha 💝</div>
+           </div>
+           <div class="message-text">
+               Hisham, Words cannot express how proud we are of you today! 🌟 You've worked so hard, and your dedication, perseverance, and brilliance have paid off in the most spectacular way. ✨
+               As your aunts, we've always known you were destined for amazing things, but seeing you shine so brightly has truly filled our hearts with joy and admiration. You've made us so proud. 💫
+               This achievement is a testament to your incredible talent, passion, and determination. Remember that this is just the beginning of a remarkable journey, and we can't wait to see all the wonderful things you'll accomplish in the future. 🚀
+               Congratulations on this well-deserved honor! (Aslu thuhtha sidin vahta boa falhaaleema hisham brain upgrade vefa theenee ) 🧠✨
+           </div>
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Love, Peachy & Aydin 💖</div>
+           </div>
+           <img src="https://media.discordapp.net/attachments/1140998280352907297/1324251650424176713/unnamed.png?ex=677778f4&is=67762774&hm=74d41d05e979aac7225026fb8d8d0322c880468e424e35534408ef5e7368092a&=&format=webp&quality=lossless" alt="Message from Peachy & Aydin" class="message-image">
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Ibs 🌟</div>
+           </div>
+           <div class="message-text">
+               Congratulations, Dhonbey! 🎊 
+               I'm so proud of all the hard work and dedication you've put in to earn your degree. This is such an incredible achievement, and I know this is just the beginning of even more success ahead. Even though sometimes you make me feel like hitting you (just kidding! Or maybe not 😅), I truly admire your perseverance and strength and dedication for your studies, (i didnt want to admit it but i just did 🤫).  You've earned this moment. Enjoy it, you deserve it! 🌟
+           </div>
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Love Kiki & Kaina 💫</div>
+           </div>
+           <div class="message-text">
+               Congratulations on your well-deserved success! 🎉 ⭐
+           </div>
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Hijje ✨</div>
+           </div>
+           <img src="https://media.discordapp.net/attachments/1140998280352907297/1324253149652844584/unnamed_1.png?ex=67777a5a&is=677628da&hm=91d32edf692a136682d79160334ece87fe0e7af30c4d8c0ee773db1579e8f90a&=&format=webp&quality=lossless" alt="Message from Hijje" class="message-image">
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Suha 🌸</div>
+           </div>
+           <div class="message-text">
+               many many congratulations on your achievement, hisham! proud of u!! 🎊 💫
+           </div>
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Eaf 👑</div>
+           </div>
+           <div class="message-text">
+               Congrats KING u are so cool and we are so proud of u! ✨ 🌟
+           </div>
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Nuha 💫</div>
+           </div>
+           <div class="message-text">
+               Congratulations, hisham! Always so proud of you. 🌟 💝
+           </div>
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Maama & kaafa 🤲</div>
+           </div>
+           <div class="message-text">
+               Miadhu Maama aai kaafa varah ufaavehje thi hoadhi kaamiyaaby ah 🎉
+               Dharifulhu ge nan govumun Maama iny varah ufalun ekamaku varah dheraves vi dharifulhu stage mathin nufenunyma ✨
+               Thiya hoadhi kaamiyaaby ah maama aai kaafa ge faraaathun varah bodah maruhaba 🎊
+               Maama aai kaafa ge abadhuves uhmeedhaky dharifulhuge thiya hihvaraa eku kuri ah dhiyumashe! 🤲 💫
+           </div>
+       </div>
+
+       <div class="message-card">
+           <div class="message-header">
+               <div class="author">Hudhna WIFI 💝</div>
+           </div>
+           <div class="message-text">
+               Thanks to me and my world-class scoldings and negative motivation (Told u it works! FR 😤), you finally studied and nailed those grades—you're welcome! 😏
+               I adore you, my overachiever. Anyhooo, congrats, Hishjiko@gmail.com! You've outdone yourself again. I'm seriously soooo proud of you. Here's to your (OUR, obv) big win, my partial credit for your brilliance, and a very good excuse to celebrate with cake! 🎉 🍰 
+               and you are definitely cleaning up after this party. Love you endlessly! ❣️ 🥳
+           </div>
+       </div>
+   </div>
+
+   <div id="imageModal" class="modal">
+       <img class="modal-content" id="modalImage">
+   </div>
+
+   <script>
+       const modal = document.getElementById('imageModal');
+       const modalImg = document.getElementById('modalImage');
+       const images = document.getElementsByClassName('message-image');
+
+       Array.from(images).forEach(img => {
+           img.onclick = function() {
+               modal.style.display = "block";
+               modalImg.src = this.src;
+           }
+       });
+
+       modal.onclick = function() {
+           modal.style.display = "none";
+       }
+   </script>
 </body>
 </html>
